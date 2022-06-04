@@ -1,3 +1,4 @@
+python3-pip
 numpy==1.22.2
 opencv_python==4.5.5.62
 requests==2.26.0
@@ -5,5 +6,3 @@ streamlit==1.7.0
 streamlit_lottie==0.0.3
 streamlit_option_menu==0.3.2
 tensorflow==2.8.0
-pickle==2.0
-pip==22.1.2
