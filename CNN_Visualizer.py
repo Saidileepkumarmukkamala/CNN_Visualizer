@@ -111,7 +111,7 @@ def main():
         
     elif option_type == "Custom Model":
         st.subheader("Upload Your Model")
-        model_custom = st.file_uploader("Upload Model", type=['h5', 'pkl'])
+        model_custom = st.file_uploader("Upload Model", type=['h5'])
 
         if model_custom != None:
             image_upload = st.file_uploader("Upload Image",type=['jpg', 'png', 'jpeg'])
@@ -120,9 +120,6 @@ def main():
                 st.markdown("<h2 style='color: #c9b42c;'>Input Model Architecture</h2>",unsafe_allow_html=True)
                 if model_custom.type == 'application/x-hdf':
                     model_custom_1 = load_model(model_custom.name)
-                    model_custom_1.summary(print_fn=lambda x: st.text(x))
-                else:
-                    model_custom_1 = pickle.load(open(model_custom.name, 'rb')) 
                     model_custom_1.summary(print_fn=lambda x: st.text(x))
 
                 layers = model_custom_1.layers
