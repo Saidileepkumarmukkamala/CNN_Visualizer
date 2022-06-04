@@ -9,7 +9,6 @@ import numpy as np # numpy - expand_dims
 import requests  # pip install requests
 from streamlit_lottie import st_lottie
 import pickle
-import tensorflow as tf # Main dl architecture
 from tensorflow.keras.models import load_model, Sequential # Modelling
 
 def model_call(model,input):
